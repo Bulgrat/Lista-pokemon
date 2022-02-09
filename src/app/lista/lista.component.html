@@ -1,15 +1,17 @@
 <table class="table">
     <thead>
-        <select #select (change)="0" class="form-select">
+        <select #select (change)="select" class="form-select">
             <option value="0">Selecione um Pokemon</option>
             <option *ngFor="let pokemon of pokemonService.poke" [value]="pokemon.name">{{pokemon.name}}</option>
         </select>
     </thead>
+    <tbody>
 
-    <tbody *ngFor="let pokemon of pokemonService.poke">
+    </tbody>
+    <!-- <tbody *ngFor="let pokemon of pokemonService.poke">
         <tr *ngIf="select.value == pokemon.name">
             <th>{{pokemon.name | uppercase}}</th>
             <th>{{pokemon.url}}</th>
         </tr>
-    </tbody>
+    </tbody> -->
 </table>
