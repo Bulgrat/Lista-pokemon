@@ -10,6 +10,8 @@ export class ListaComponent implements OnInit {
 
   constructor(public pokemonService: PokemonService) { }
 
-  ngOnInit(): void {
+  mudarPkm(val){
+    this.pokemonService.onePoke(val)
   }
+  ngOnInit(): void {}
 }
