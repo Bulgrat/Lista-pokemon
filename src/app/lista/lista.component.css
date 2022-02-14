@@ -1,0 +1,40 @@
+
+.divPrincipal{
+  background-color: lightgray;
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  /* vertical-align: middle; */
+  box-shadow: 5px 5px 5px gray;
+}
+
+.imgTempo{
+  margin: 20px;
+  border-radius: 20px;
+
+}
+
+.pData{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.divText{
+  width: 150pt;
+}
+.divText>p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium;
+}
+
+.imgPokem{
+  width: 100px;
+  height: 100px;
+  border: 1px solid darkslateblue;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 5px;
+}

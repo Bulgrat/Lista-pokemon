@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
