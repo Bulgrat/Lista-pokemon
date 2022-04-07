@@ -10,6 +10,7 @@ import { CardComponent } from './card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatSelectModule } from '@angular/material/select';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

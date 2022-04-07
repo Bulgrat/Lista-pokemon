@@ -1,39 +1,44 @@
-<div class="table-responsive-sm col-6 table-bordered">
-  <table class="table table-sm ">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <select #select (change)="mudarPkm(select.value)">
-          <option value="0">Selecione um Pokemon</option>
-          <option *ngFor="let pokemon of pokemonService.poke" [value]="pokemon.name">{{pokemon.name}}</option>
-        </select>
-      </tr>
-    </thead>
+<mat-grid-list cols="1" rowHeight="200px">
+  <mat-grid-tile>
+    <p class="pData">Pokedex</p>
+  </mat-grid-tile>
 
-    <tbody>
-      <tr>
-        <th scope="row">Altura</th>
-        <td>{{pokemonService.oneP.height}}</td>
-      </tr>
-      <tr>
-        <th scope="row">Peso</th>
-        <td>{{pokemonService.oneP.weight}}</td>
-      </tr>
-      <tr>
-        <th scope="row">Tipo</th>
-        <td *ngFor="let types of pokemonService.oneP.types">{{types.type.name}}</td>
-      </tr>
-      <tr *ngIf="pokemonService.oneP.abilities">
-        <th scope="row">Habilidades</th>
-        <td *ngFor="let abilities of pokemonService.oneP.abilities">{{abilities.ability.name}}</td>
-      </tr>
-      <tr>
-        <th>Imagen</th>
-        <td><img src="{{pokemonService.oneP.sprites ? pokemonService.oneP.sprites.front_default : ''}}"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <mat-grid-tile>
+    <!-- <h3>Pokemon:</h3> -->
+    <select #select (change)="mudarPkm(select.value)">
+      <option value="0">Selecione um Pokemon</option>
+      <option
+        *ngFor="let pokemon of pokemonService.poke"
+        [value]="pokemon.name"
+      >
+        {{ pokemon.name }}
+      </option>
+    </select>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card>
+      <mat-card-title-group>
+        <mat-card-title>{{
+          pokemonService.oneP.name | uppercase
+        }}</mat-card-title>
+        <mat-card-subtitle *ngFor="let types of pokemonService.oneP.types">{{
+          types.type.name
+        }}</mat-card-subtitle>
+        <img
+          mat-card-lg-image
+          src="{{
+            pokemonService.oneP.sprites
+              ? pokemonService.oneP.sprites.front_default
+              : branco
+          }}"
+        />
+      </mat-card-title-group>
+      <mat-card-content> </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
 <!-- <div class="divPrincipal container">
   <div class="row">
     <div class="col-1">
