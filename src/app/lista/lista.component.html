@@ -27,10 +27,10 @@
         <th scope="row">Habilidades</th>
         <td *ngFor="let abilities of pokemonService.oneP.abilities">{{abilities.ability.name}}</td>
       </tr>
-      <!-- <tr>
+      <tr>
         <th>Imagen</th>
         <td><img src="{{pokemonService.oneP.sprites ? pokemonService.oneP.sprites.front_default : ''}}"></td>
-      </tr> -->
+      </tr>
     </tbody>
   </table>
 </div>
