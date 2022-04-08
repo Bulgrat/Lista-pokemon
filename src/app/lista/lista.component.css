@@ -22,7 +22,7 @@
 
 .pData{
   font-size: 80px;
-  font-weight: bold;
+  /* font-weight: bold; */
   -webkit-text-stroke: 3px #3761a8;
   font-family: 'Pokemon Solid', sans-serif;
 }
