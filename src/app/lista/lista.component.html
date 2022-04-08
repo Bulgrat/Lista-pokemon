@@ -10,12 +10,25 @@
 
     <mat-grid-tile>
       <!-- <h3>Pokemon:</h3> -->
+      <!-- <mat-form-field>
+        <mat-select
+          (change)="mudarPkm1()"
+          placeholder="Pokemon"
+          [(value)]="pokemon"
+        >
+          <mat-option [value]="0">Selecione um Pokemon</mat-option>
+          <mat-option *ngFor="let pokemon of pokemonService.poke" [value]="pokemon.name">
+            {{ pokemon.name }}</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+
       <select #select (change)="mudarPkm(select.value)">
         <option value="0">Selecione um Pokemon</option>
         <option *ngFor="let pokemon of pokemonService.poke" [value]="pokemon.name">
           {{ pokemon.name }}
         </option>
       </select>
+
     </mat-grid-tile>
 
     <mat-grid-tile>
