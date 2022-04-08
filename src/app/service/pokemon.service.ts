@@ -13,7 +13,7 @@ export class PokemonService {
   constructor(private httpClient: HttpClient) { 
     this.pokemons()
   }
-  
+  // https://pokeapi.co/api/v2/type/normal
   async pokemons() {
     const requisicao = await this.httpClient
     .get<any>('https://pokeapi.co/api/v2/pokemon?limit=9999')
