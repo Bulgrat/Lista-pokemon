@@ -1,12 +1,18 @@
 .grid-list{
   background-color: lightgray;
   border: 1px solid black;
+  color: black;
   border-radius: 10px;
   margin: 5px;
   padding: 10px;
   box-shadow: 5px 5px 5px gray;
 }
-
+.cardSub{
+  color: black;
+}
+::placeholder{
+  /* color: white !important; */
+}
 .grid-tile1{
   color: #feca1b;
 }

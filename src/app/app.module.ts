@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     BrowserAnimationsModule,
     MatCardModule,
     MatSelectModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

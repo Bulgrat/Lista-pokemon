@@ -10,40 +10,40 @@
 
     <mat-grid-tile>
       <!-- <h3>Pokemon:</h3> -->
-      <!-- <mat-form-field>
+      <mat-form-field>
         <mat-select
-          (change)="mudarPkm1()"
-          placeholder="Pokemon"
-          [(value)]="pokemon"
-        >
+          (selectionChange)="mudarPkm($event.value)"
+          placeholder="Pokemon"         >
           <mat-option [value]="0">Selecione um Pokemon</mat-option>
-          <mat-option *ngFor="let pokemon of pokemonService.poke" [value]="pokemon.name">
+          <mat-option *ngFor="let pokemon of pokemons" [value]="pokemon.name">
             {{ pokemon.name }}</mat-option>
         </mat-select>
-      </mat-form-field> -->
+      </mat-form-field>
 
-      <select #select (change)="mudarPkm(select.value)">
+      <!-- <select #select (change)="mudarPkm(select.value)">
         <option value="0">Selecione um Pokemon</option>
-        <option *ngFor="let pokemon of pokemonService.poke" [value]="pokemon.name">
+        <option *ngFor="let pokemon of pokemons" [value]="pokemon.name">
           {{ pokemon.name }}
         </option>
-      </select>
+      </select> -->
 
     </mat-grid-tile>
 
     <mat-grid-tile>
       <mat-card class="grid-list">
         <mat-card-title-group>
-          <mat-card-title *ngIf="pokemonService.oneP.id">
-            {{ '#'+pokemonService.oneP.id }}
-            {{ pokemonService.oneP.name | uppercase }}
+          <mat-card-title *ngIf="oneP.id">
+            {{ '#'+oneP.id }}
+            {{ oneP.name | uppercase }}
           </mat-card-title>
-          <mat-card-subtitle *ngFor="let types of pokemonService.oneP.types">{{
-            types.type.name
-            }}</mat-card-subtitle>
+          <mat-card-subtitle class="cardSub"
+            *ngFor="let types of oneP.types"
+          >
+            {{ types.type.name }}
+          </mat-card-subtitle>
           <img mat-card-lg-image src="{{
-            pokemonService.oneP.sprites
-              ? pokemonService.oneP.sprites.front_default
+            oneP.sprites
+              ? oneP.sprites.front_default
               : branco
           }}" />
         </mat-card-title-group>
@@ -52,17 +52,4 @@
     </mat-grid-tile>
 
   </mat-grid-list>
-  <!-- <div class="divPrincipal container">
-  <div class="row">
-    <div class="col-1">
-      <h1>Nome: {{pokemonService.oneP.nome}}</h1>
-      <h2 *ngFor="let types of pokemonService.oneP.types">Tipos: {{types.type.name}}</h2>
-      <h3 *ngFor="let abilities of pokemonService.oneP.abilities">Habilidades: {{abilities.ability.name}}</h3>
-      <img class="imgPokem" *ngIf="pokemonService.oneP.sprites"
-      src="{{pokemonService.oneP.sprites ? pokemonService.oneP.sprites.front_default : ''}}">
-      <img class="imgPokem" *ngIf="pokemonService.oneP.sprites"
-        src="{{pokemonService.oneP.sprites ? pokemonService.oneP.sprites.front_shiny : ''}}">
-      </div>
-    </div>
-  </div> -->
 </body>

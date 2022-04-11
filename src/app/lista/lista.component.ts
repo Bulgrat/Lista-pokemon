@@ -9,15 +9,27 @@ import { PokemonService } from '../service/pokemon.service';
 export class ListaComponent implements OnInit {
 
   branco = 'https://www.colorhexa.com/d3d3d3.png';
+  oneP: any = {};
+  pokemons: any = '';
   pokemon: string;
 
   constructor(public pokemonService: PokemonService) { }
 
-  mudarPkm(valor) {
-    this.pokemonService.onePoke(valor)
+  ngOnInit(): void {
+    this.obterPokemons();
   }
-  mudarPkm1() {
-    this.pokemonService.onePoke(this.pokemon)
+  mudarPkm(event) {
+    console.table(event);
+    this.pokemonService.onePoke(event)
+    .pipe().subscribe(poke =>{
+      this.oneP = poke;
+      console.table(this.oneP);
+    });
   }
-  ngOnInit(): void { }
+  private obterPokemons(): void{
+    this.pokemonService.obterPokemon()
+    .pipe().subscribe(pokemons =>{
+      this.pokemons = pokemons.results;
+    });
+  }
 }
