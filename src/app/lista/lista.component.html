@@ -9,7 +9,6 @@
     </mat-grid-tile>
 
     <mat-grid-tile>
-      <!-- <h3>Pokemon:</h3> -->
       <mat-form-field>
         <mat-select
           (selectionChange)="mudarPkm($event.value)"
@@ -19,14 +18,6 @@
             {{ pokemon.name }}</mat-option>
         </mat-select>
       </mat-form-field>
-
-      <!-- <select #select (change)="mudarPkm(select.value)">
-        <option value="0">Selecione um Pokemon</option>
-        <option *ngFor="let pokemon of pokemons" [value]="pokemon.name">
-          {{ pokemon.name }}
-        </option>
-      </select> -->
-
     </mat-grid-tile>
 
     <mat-grid-tile>
@@ -52,4 +43,10 @@
     </mat-grid-tile>
 
   </mat-grid-list>
+  <!-- <mat-grid-list cols="1" rowHeight="200px">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list> -->
 </body>
