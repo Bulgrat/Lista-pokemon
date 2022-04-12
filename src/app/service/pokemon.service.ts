@@ -12,7 +12,6 @@ export class PokemonService {
   // typ: any = {};
 
   constructor(private httpClient: HttpClient) {
-
   }
   obterPokemonS():Observable<any> {
     return this.httpClient
