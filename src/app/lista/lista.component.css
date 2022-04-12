@@ -10,9 +10,7 @@
 .cardSub{
   color: black;
 }
-::placeholder{
-  /* color: white !important; */
-}
+
 .grid-tile1{
   color: #feca1b;
 }
