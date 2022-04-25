@@ -28,11 +28,9 @@ export class ListaComponent implements OnInit {
         this.types = poke.types;
         poke.types.forEach(tipo => {
           this.pokemonService.typeS(this.types).pipe().subscribe(type =>{
-
           });
         });
         // this.pokemonService.typeS(this.types).pipe().subscribe(type =>{
-
         // });
         console.table(this.types[0].type.url);
       });
