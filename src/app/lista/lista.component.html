@@ -1,9 +1,8 @@
 <head>
-  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet" />
 </head>
 <body class="body">
   <mat-grid-list cols="1" rowHeight="200px">
-
     <mat-grid-tile class="grid-tile1">
       <p class="pData">Pokedex</p>
     </mat-grid-tile>
@@ -12,10 +11,12 @@
       <mat-form-field>
         <mat-select
           (selectionChange)="mudarPkm($event.value)"
-          placeholder="Pokemon"         >
+          placeholder="Pokemon"
+        >
           <mat-option [value]="0">Selecione um Pokemon</mat-option>
           <mat-option *ngFor="let pokemon of pokemons" [value]="pokemon.name">
-            {{ pokemon.name }}</mat-option>
+            {{ pokemon.name }}</mat-option
+          >
         </mat-select>
       </mat-form-field>
     </mat-grid-tile>
@@ -24,29 +25,35 @@
       <mat-card class="grid-list">
         <mat-card-title-group>
           <mat-card-title *ngIf="oneP.id">
-            {{ '#'+oneP.id }}
+            {{ "#" + oneP.id }}
             {{ oneP.name | uppercase }}
           </mat-card-title>
-          <mat-card-subtitle class="cardSub"
-            *ngFor="let types of oneP.types"
-          >
+          <mat-card-subtitle class="cardSub" *ngFor="let types of oneP.types">
             {{ types.type.name }}
           </mat-card-subtitle>
-          <img mat-card-lg-image src="{{
-            oneP.sprites
-              ? oneP.sprites.front_default
-              : branco
-          }}" />
+          <img
+            mat-card-lg-image
+            src="{{ oneP.sprites ? oneP.sprites.front_default : branco }}"
+            />            
         </mat-card-title-group>
         <mat-card-content> </mat-card-content>
       </mat-card>
     </mat-grid-tile>
-
   </mat-grid-list>
-  <!-- <mat-grid-list cols="1" rowHeight="200px">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
+  <!-- <mat-grid-list cols="5" rowHeight="100px">
+    <mat-grid-tile
+      [colspan]="2"
+      style="background: blue;"
+    >1</mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="1"
+      style="background: red"
+    >2</mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="2"
+      style="background: green"
+    >3</mat-grid-tile>
     <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>5</mat-grid-tile>
   </mat-grid-list> -->
 </body>
