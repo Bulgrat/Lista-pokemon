@@ -11,9 +11,8 @@ export class ListaComponent implements OnInit {
   oneP: any = {};
   pokemons: any = '';
   types: any = {};
-  // pokemon: string;
 
-  constructor(public pokemonService: PokemonService) {}
+  constructor(public pokemonService: PokemonService) { }
 
   ngOnInit(): void {
     this.obterPokemons();
@@ -27,12 +26,9 @@ export class ListaComponent implements OnInit {
         this.oneP = poke;
         this.types = poke.types;
         poke.types.forEach(tipo => {
-          this.pokemonService.typeS(this.types).pipe().subscribe(type =>{
+          this.pokemonService.typeS(this.types).pipe().subscribe(type => {
           });
         });
-        // this.pokemonService.typeS(this.types).pipe().subscribe(type =>{
-          //
-        // });
         console.table(this.types[0].type.url);
       });
   }
