@@ -1,13 +1,5 @@
-# ListaPokemon
+# Lista Pokemon
 
-## Development server
-
-## Code scaffolding
-
-## Build
-
-## Running unit tests
-
-## Running end-to-end tests
+## Pokedex da primeira geração de pokemon.
 
 ## Further help
