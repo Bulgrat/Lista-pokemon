@@ -2,4 +2,8 @@
 
 ## Pokedex da primeira geração de pokemon.
 
-## Further help
+Consulte qualquer pokemon da 1º gen, obetendo número, tipos e imagem do Pokemom.
+
+Site feito em Angular usando Anguluar Material.
+
+Lista de pokemon geradas atraves de requisição da Api pokeapi.co.
