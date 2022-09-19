@@ -2,7 +2,7 @@
 
 ### Pokedex da primeira geração de pokemon.
 
-Consulte qualquer pokemon da 1º gen, obetendo número, tipos e imagem do Pokemom.
+Consulte qualquer pokemon da 1º gen, obtendo número, tipos e imagem do Pokemom.
 
 Site feito em Angular usando Angular Material.
 
